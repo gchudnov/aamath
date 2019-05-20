@@ -7,7 +7,7 @@ ASCII art mathematics renderer
 As a simple example, the output for an expression such as
 
 ```text
-    A_OPR = x*sqrt(x^2-1)/2 - int(sqrt(t^2-1), t = 1 .. x)
+A_OPR = x*sqrt(x^2-1)/2 - int(sqrt(t^2-1), t = 1 .. x)
 ```
 
 will look like
@@ -56,4 +56,4 @@ Please email any comments, suggestions and patches to:
 
   mauro_persano at yahoo dot com
 
-  [aamath](http://fuse.superglue.se/aamath/)
+  [http://fuse.superglue.se/aamath/](http://fuse.superglue.se/aamath/)
