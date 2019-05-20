@@ -1,0 +1,2 @@
+# aamath
+ASCII art mathematics
