@@ -56,4 +56,4 @@ Please email any comments, suggestions and patches to:
 
   mauro_persano at yahoo dot com
 
-  http://fuse.superglue.se/aamath/
+  [aamath](http://fuse.superglue.se/aamath/)
