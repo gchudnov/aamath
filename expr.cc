@@ -1192,7 +1192,7 @@ IntegralOnInterval::render_head() const
 
 class SumSymbol : public OpSymbol {
   public:
-	void render(Canvas& c, int r, int c) const;
+	void render(Canvas& canvas, int r, int c) const;
 };
 
 void
@@ -1208,7 +1208,7 @@ SumSymbol::render(Canvas& canvas, int r, int c) const
 
 class ProductSymbol : public OpSymbol {
   public:
-	void render(Canvas& c, int r, int c) const;
+	void render(Canvas& canvas, int r, int c) const;
 };
 
 void
