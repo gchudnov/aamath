@@ -25,5 +25,5 @@ lexer.cc: lexer.l parser.h
 clean:
 	rm -f *.o lexer.cc parser.h parser.cc $(TARGET)
 
-install:
+install: $(TARGET)
 	install -d $(DESTDIR)
