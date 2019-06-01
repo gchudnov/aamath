@@ -1,0 +1,27 @@
+name: aamath
+base: core18
+version: '0.3'
+summary: ASCII art mathematics
+description: |
+  ASCII art mathematics renderer
+
+  aamath is a program that reads mathematical expressions in infix notation and renders them as ASCII art.
+  It may be useful to send mathematics through text-only media, such as e-mail or newsgroups.
+
+grade: stable
+confinement: strict
+
+apps:
+  aamath:
+    command: aamath
+
+parts:
+  aamath:
+    plugin: make
+    source: https://github.com/gchudnov/aamath.git
+    build-packages:
+      - g++
+      - make
+      - flex
+      - bison
+      - libreadline-dev

@@ -10,8 +10,11 @@ LIBS		= -lreadline -ltermcap
 $(TARGET): $(OBJS)
 	$(LD) $(LFLAGS) $(OBJS) -o $@ $(LIBS)
 
-parser.cc parser.h: parser.y
-	yacc -d parser.y && mv y.tab.c parser.cc && mv y.tab.h parser.h
+parser.cc: parser.y
+	yacc -d parser.y && mv y.tab.c parser.cc
+
+parser.h: parser.cc
+	mv y.tab.h parser.h
 
 lexer.cc: lexer.l parser.h
 	lex lexer.l && mv lex.yy.c lexer.cc
@@ -21,3 +24,6 @@ lexer.cc: lexer.l parser.h
 
 clean:
 	rm -f *.o lexer.cc parser.h parser.cc $(TARGET)
+
+install:
+	install -d $(DESTDIR)

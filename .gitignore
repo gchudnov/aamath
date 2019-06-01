@@ -1,3 +1,6 @@
 .vscode
 *.o
 aamath
+parser.cc
+parser.h
+lexer.cc
