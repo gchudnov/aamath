@@ -4,3 +4,4 @@ aamath
 parser.cc
 parser.h
 lexer.cc
+*.snap
