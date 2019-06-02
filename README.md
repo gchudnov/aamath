@@ -28,7 +28,33 @@ Other than the usual operations (addition, subtraction, multiplication, division
 
 aamath is a command-line utility. It was successfully compiled and tested on Linux, FreeBSD, Cygwin, and DJGPP. It is written in C++, and will need lex and yacc to compile. GNU readline is also recommended, although not essential.
 
-## To compile on *nix
+## Installing
+
+From Snap Store:
+
+    snap install aamath
+
+[![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/aamath)
+
+## Usage
+
+```bash
+aamath "lim(1/x^2 - (cos(x)/x)^2, x -> inf) = 1"
+```
+
+output:
+
+```text
+        /            2\
+        | 1   /cos x\ |
+ lim    |-- - |-----| | = 1
+        | 2   \  x  / |
+x -> oo \x            /
+```
+
+More examples are included in the file [EXAMPLES.md](EXAMPLES.md).
+
+## Compiling on *nix
 
 ```bash
   make -f Makefile
@@ -52,8 +78,10 @@ To compile without readline:
   remove -DUSE_READLINE and -lreadline and -ltermcamp from Makefile
 ```
 
-Please email any comments, suggestions and patches to:
+## Copyright
 
-  mauro_persano at yahoo dot com
+aamath is licensed under the GNU General Public License, v2. A copy of this license is included in the file [LICENSE](LICENSE).
 
-  [http://fuse.superglue.se/aamath/](http://fuse.superglue.se/aamath/)
+## Author
+
+[http://fuse.superglue.se/aamath/](http://fuse.superglue.se/aamath/); mauro_persano at yahoo dot com
