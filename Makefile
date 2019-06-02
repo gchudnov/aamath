@@ -11,13 +11,15 @@ $(TARGET): $(OBJS)
 	$(LD) $(LFLAGS) $(OBJS) -o $@ $(LIBS)
 
 parser.cc: parser.y
-	yacc -d parser.y && mv y.tab.c parser.cc
+	yacc -d parser.y && \
+	mv y.tab.c parser.cc
 
 parser.h: parser.cc
 	mv y.tab.h parser.h
 
 lexer.cc: lexer.l parser.h
-	lex lexer.l && mv lex.yy.c lexer.cc
+	lex lexer.l && \
+	mv lex.yy.c lexer.cc
 
 .cc.o:
 	$(CXX) $(CFLAGS) -c $<
@@ -26,4 +28,6 @@ clean:
 	rm -f *.o lexer.cc parser.h parser.cc $(TARGET)
 
 install: $(TARGET)
-	install -d $(DESTDIR)
+	install -d $(DESTDIR) && \
+	install $(TARGET) $(DESTDIR)
+
