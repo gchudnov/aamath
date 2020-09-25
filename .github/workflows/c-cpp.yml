@@ -7,7 +7,7 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build_ubuntu:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -16,7 +16,9 @@ jobs:
         sudo apt install flex bison libreadline-dev
     - name: Compile
       id: compile
-      run: make
+      run: |
+        make
+        tar -czf aamath-ubuntu-x86_64.tar.gz aamath
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
@@ -34,6 +36,5 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: ./aamath
-        asset_name: aamath
-        asset_content_type: application/x-executable
+        asset_path: ./aamath-ubuntu-x86_64.tar.gz
+        asset_name: aamath-ubuntu-x86_64.tar.gz
