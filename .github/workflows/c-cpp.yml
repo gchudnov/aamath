@@ -38,3 +38,4 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: ./aamath-ubuntu-x86_64.tar.gz
         asset_name: aamath-ubuntu-x86_64.tar.gz
+        asset_content_type: application/gzip
