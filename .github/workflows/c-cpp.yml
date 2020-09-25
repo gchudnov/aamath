@@ -16,3 +16,6 @@ jobs:
         sudo apt install flex bison libreadline-dev
     - name: compile
       run: make
+    - uses: actions/upload-artifact@v2
+      with:
+        path: aamath
