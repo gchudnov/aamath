@@ -1,7 +1,8 @@
-.vscode
 *.o
+*.snap
+.idea
+.vscode
 aamath
+lexer.cc
 parser.cc
 parser.h
-lexer.cc
-*.snap
