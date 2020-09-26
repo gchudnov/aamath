@@ -2,6 +2,8 @@
 
 ASCII art mathematics renderer
 
+![C/C++ CI](https://github.com/gchudnov/aamath/workflows/C/C++%20CI/badge.svg)
+
 *aamath* is a program that reads mathematical expressions in infix notation and renders them as ASCII art. It may be useful to send mathematics through text-only media, such as e-mail or newsgroups.
 
 As a simple example, the output for an expression such as
